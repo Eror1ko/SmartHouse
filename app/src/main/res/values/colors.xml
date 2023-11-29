@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFF</color>
+    <color name="brown">#a04c4c</color>
+    <color name="mainPanel">#8070d4e4</color>
+    <color name="mainBack">#6030CCE1</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="graylinear">#302C34</color>
+    <color name="bluesave">#1054A4</color>
+    <color name="graytextview">#84848C</color>
+    <color name="orangebutt">#FF1424</color>
+    <color name="linearcolor">#E3F8FB</color>
+
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/graylinear">
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Твой дом"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="адрес"
+                android:textColor="@color/graytextview"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Комнаты"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="25dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                app:cornerRadius="0dp"
+                android:layout_width="130dp"
+                android:layout_height="18dp"
+                android:backgroundTint="@color/bluesave"
+
+                android:layout_marginTop="11dp"/>
+
+        </LinearLayout>
+
+<ImageButton
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:layout_gravity="end"
+    android:background="@drawable/button_circil"
+    android:src="@drawable/setting_pic"
+    android:scaleType="centerCrop"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="10dp"/>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="520dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_circil"
+            android:scaleType="centerCrop"
+            android:src="@drawable/add"
+            android:layout_gravity="end"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
