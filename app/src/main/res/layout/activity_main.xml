@@ -52,6 +52,7 @@
                 android:text="Электронная почта" />
 
             <EditText
+                android:id="@+id/emailAuth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="nonamowe@mail.ru" />
@@ -62,6 +63,7 @@
                 android:text="Пароль" />
 
             <EditText
+                android:id="@+id/passwordAuth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="password" />
@@ -74,6 +76,7 @@
             android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEnter"
                 app:cornerRadius="10dp"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"

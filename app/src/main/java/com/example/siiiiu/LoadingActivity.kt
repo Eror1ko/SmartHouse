@@ -12,10 +12,7 @@ class LoadingActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.loadingpicture)
-
-
         simulateLoading()
-
         finish()
     }
 
