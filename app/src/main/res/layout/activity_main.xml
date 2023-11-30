@@ -84,13 +84,15 @@
                 android:backgroundTint="@color/brown"/>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReg"
                 app:cornerRadius="10dp"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:padding="13dp"
                 android:text="Регистрация"
                 android:textSize="18dp"
-                android:backgroundTint="@color/black"/>
+                android:backgroundTint="@color/black"
+                />
         </LinearLayout>
 
 
