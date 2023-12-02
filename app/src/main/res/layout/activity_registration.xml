@@ -97,6 +97,8 @@
                 android:backgroundTint="@color/brown"/>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIn"
+                android:onClick="btnIn"
                 app:cornerRadius="10dp"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"

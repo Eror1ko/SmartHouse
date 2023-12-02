@@ -47,8 +47,6 @@
 
 
 
-
-
             <GridLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -163,7 +161,15 @@
 
         </LinearLayout>
 
-
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="10dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:text="Выйти"
+            android:id="@+id/btnSave"
+            android:textSize="18dp"
+            android:backgroundTint="@color/black" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

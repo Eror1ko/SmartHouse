@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.lifecycle.lifecycleScope
+import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.gotrue.GoTrue
 import io.github.jan.supabase.gotrue.gotrue
@@ -15,6 +16,18 @@ import io.github.jan.supabase.postgrest.Postgrest
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
+    public val client = createSupabaseClient(
+        supabaseUrl = "https://glwyfmrukvbrductrilt.supabase.co",
+        supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdsd3lmbXJ1a3ZicmR1Y3RyaWx0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEyNDU4NzUsImV4cCI6MjAxNjgyMTg3NX0.LlIi3cEdaFEbKfWAqgRvC6KepfDJLhreARfX6Rw-ubI"
+    ) {
+        install(GoTrue)
+        install(Postgrest)
+        //install other modules
+    }
+    fun client() : SupabaseClient
+    {
+        return client
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,14 +36,16 @@ class MainActivity : AppCompatActivity() {
         val emailAuth = findViewById<EditText>(R.id.emailAuth)
         val passAuth = findViewById<EditText>(R.id.passwordAuth)
 
-        val client = createSupabaseClient(
-            supabaseUrl = "https://glwyfmrukvbrductrilt.supabase.co",
-            supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdsd3lmbXJ1a3ZicmR1Y3RyaWx0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEyNDU4NzUsImV4cCI6MjAxNjgyMTg3NX0.LlIi3cEdaFEbKfWAqgRvC6KepfDJLhreARfX6Rw-ubI"
-        ) {
-            install(GoTrue)
-            install(Postgrest)
-            //install other modules
+        /* ПОЛУЧЕНИЕ И ПРОВЕРКА ПИН-КОДА
+        val receivedPinCode = intent.getStringExtra("pinCode")
+
+        if(receivedPinCode.isNullOrEmpty()){
+            startActivity(Intent(this, PinCodeCreate::class.java))
         }
+        else{
+            startActivity(Intent(this, PinCodeCreate::class.java))
+        }
+        */
 
         btnReg.setOnClickListener {
             val intent = Intent(this, Registration::class.java)
@@ -39,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
         btnEnter.setOnClickListener {
             lifecycleScope.launch {
-                client.gotrue.loginWith(Email) {
+               client().gotrue.loginWith(Email) {
                     email = emailAuth.text.toString()
                     password = passAuth.text.toString()
                 }
