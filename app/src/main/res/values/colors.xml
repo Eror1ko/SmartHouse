@@ -13,5 +13,6 @@
     <color name="graytextview">#84848C</color>
     <color name="orangebutt">#FF1424</color>
     <color name="linearcolor">#E3F8FB</color>
+    <color name="linearblue">#2462AA</color>
 
 </resources>

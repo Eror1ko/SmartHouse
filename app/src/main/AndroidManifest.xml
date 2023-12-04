@@ -16,6 +16,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".custom_room"
+            android:exported="false" />
+        <activity
+            android:name=".PinCodePress"
+            android:exported="false" />
+        <activity
+            android:name=".CreatePinCode"
+            android:exported="false" />
+        <activity
             android:name=".PinCodeEnter"
             android:exported="false" />
         <activity

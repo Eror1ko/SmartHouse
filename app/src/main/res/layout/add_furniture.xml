@@ -72,56 +72,76 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp">
 
+            <LinearLayout
+                android:layout_width="101dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/living_gray"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text="Гостинная" />
+
+            </LinearLayout>
+
+
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:background="@drawable/kitchen_gray1"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="20dp"/>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:background="@drawable/bathroom_gray1"
+        android:scaleType="centerCrop" />
+
+
+
+
 
             <ImageButton
-                android:layout_width="110dp"
-                android:layout_height="120dp"
-                android:layout_row="0"
-                android:layout_column="0"
-                android:background="@drawable/kaifroom"
-                android:scaleType="centerCrop"
-                android:layout_marginEnd="20dp"
-                />
-
-            <ImageButton
-                android:layout_width="110dp"
-                android:layout_height="120dp"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:background="@drawable/kitchen"
-                android:scaleType="centerCrop"
-                android:layout_marginEnd="20dp"/>
-
-            <ImageButton
-                android:layout_width="110dp"
-                android:layout_height="120dp"
-                android:layout_row="0"
-                android:layout_column="2"
-                android:background="@drawable/bathroom"
-                android:scaleType="centerCrop" />
-
-            <ImageButton
-                android:layout_width="110dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_row="1"
                 android:layout_column="0"
-                android:background="@drawable/myroom"
+                android:background="@drawable/office_gray1"
                 android:scaleType="centerCrop" />
 
+
             <ImageButton
-                android:layout_width="110dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_row="1"
                 android:layout_column="1"
-                android:background="@drawable/sleepingroom"
+                android:background="@drawable/bed_gray1"
                 android:scaleType="centerCrop" />
 
             <ImageButton
-                android:layout_width="110dp"
-                android:layout_height="120dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_row="1"
                 android:layout_column="2"
-                android:background="@drawable/chillrom"
+                android:background="@drawable/tv_gray1"
                 android:scaleType="centerCrop" />
 
 
