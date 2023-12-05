@@ -73,21 +73,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        lifecycleScope.launch {
 
-            val city = client.postgrest["Rooms"].select()
-            val array: JSONArray = JSONArray(city.body.toString())
-
-            for (i in 0 until array.length()) {//step 1
-                Log.e("!!", "2")
-                val itemObj = array.getJSONObject(i)
-                val id = itemObj.getInt("id")
-                val name = itemObj.getString("name")
-                val pars = DataClass.Test(TextRoom = "", Image =)
-                arrayT.add(pars);
-
-            }
-        }
 
 
     }
