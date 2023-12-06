@@ -5,5 +5,5 @@ import android.widget.TextView
 
 class DataClass {
 
-    data class Test (val Image : ImageView, val TextRoom : TextView)
+    data class Room (val Id: Int = 0, val Image : Int, val RoomName: String = "")
 }

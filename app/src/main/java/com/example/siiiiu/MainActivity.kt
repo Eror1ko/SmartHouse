@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         val emailAuth = findViewById<EditText>(R.id.emailAuth)
         val passAuth = findViewById<EditText>(R.id.passwordAuth)
 
-        val arrayT: ArrayList<DataClass.Test> = ArrayList()
+        val arrayT: ArrayList<DataClass.Room> = ArrayList()
         Log.e("!!", "2")
 
 
@@ -58,8 +58,8 @@ class MainActivity : AppCompatActivity() {
         */
 
         btnReg.setOnClickListener {
-            val intent = Intent(this, Registration::class.java)
-            startActivity(intent)
+            val intent1 = Intent(this, Registration::class.java)
+            startActivity(intent1)
         }
 
         btnEnter.setOnClickListener {

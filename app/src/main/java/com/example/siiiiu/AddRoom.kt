@@ -1,5 +1,6 @@
 package com.example.siiiiu
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -31,27 +32,29 @@ class AddRoom : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_room)
         val btnAdd = findViewById<ImageButton>(R.id.btnAddRoom)
-        val arrayT: ArrayList<DataClass.Test> = ArrayList()
+        val arrayT: ArrayList<DataClass.Room> = ArrayList()
         Log.e("!!", "2")
 
 
         btnAdd.setOnClickListener {
-            lifecycleScope.launch {
-
-                val city = client.postgrest["Rooms"].select()
-                val array: JSONArray = JSONArray(city.body.toString())
-
-
-                for (i in 0 until array.length()) {//step 1
-                    Log.e("!!", "2")
-                    val itemObj = array.getJSONObject(i)
-                    val id = itemObj.getInt("id")
-                    val TextRoom = itemObj.getString("Name")
-                    val pars = DataClass.Test(TextRoom = "", Image =)
-                    arrayT.add(pars);
-
-                }
-            }
+//            lifecycleScope.launch {
+//
+//                val city = client.postgrest["Rooms"].select()
+//                val array: JSONArray = JSONArray(city.body.toString())
+//
+//
+//                for (i in 0 until array.length()) {//step 1
+//                    Log.e("!!", "2")
+//                    val itemObj = array.getJSONObject(i)
+//                    val id = itemObj.getInt("id")
+//                    val TextRoom = itemObj.getString("Name")
+//                   // val pars = DataClass.Test(TextRoom = "", Image =)
+//                   // arrayT.add(pars);
+//
+//                }
+//            }
+            val intenNiggga = Intent(this, AddRoomFurniture::class.java)
+            startActivity(intenNiggga)
         }
 
     }

@@ -24,7 +24,7 @@ class CreatePinCode : AppCompatActivity() {
     }
 
 
-    fun ButtonClickSiiiu(view : View)
+    fun click1(view : View)
     {
         val test: Button = view as Button
         password += test.text
@@ -57,7 +57,7 @@ class CreatePinCode : AppCompatActivity() {
             ell3.background = (getDrawable(R.drawable.whiteellipse))
             ell4.background = (getDrawable(R.drawable.whiteellipse))
 
-            val Intentik = Intent(this, MainActivity::class.java)
+            val Intentik = Intent(this, add_adress_layout::class.java)
             startActivity(Intentik)
         }
     }

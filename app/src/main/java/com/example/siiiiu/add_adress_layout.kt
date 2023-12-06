@@ -1,5 +1,6 @@
 package com.example.siiiiu
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
@@ -42,6 +43,8 @@ class add_adress_layout : AppCompatActivity() {
             lifecycleScope.launch {
                 client.postgrest["Data"].insert(city)
             }
+            val intenttt = Intent(this, AddRoom::class.java)
+            startActivity(intenttt)
         }
 
 
