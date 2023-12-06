@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.ImageView
 
 class CreatePinCode : AppCompatActivity() {
+    //val qwe = intent.getStringExtra("addressSet")
     var password: String = ""
     lateinit var ell1 : ImageView
     lateinit var ell2 : ImageView
@@ -58,6 +59,7 @@ class CreatePinCode : AppCompatActivity() {
             ell4.background = (getDrawable(R.drawable.whiteellipse))
 
             val Intentik = Intent(this, add_adress_layout::class.java)
+            //Intentik.putExtra("adressSet2", qwe)
             startActivity(Intentik)
         }
     }

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
@@ -16,6 +17,7 @@ import kotlinx.coroutines.launch
 import org.json.JSONArray
 
 class AddRoom : AppCompatActivity() {
+    val addressText = findViewById<TextView>(R.id.addressText)
     public val client = createSupabaseClient(
         supabaseUrl = "https://glwyfmrukvbrductrilt.supabase.co",
         supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdsd3lmbXJ1a3ZicmR1Y3RyaWx0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEyNDU4NzUsImV4cCI6MjAxNjgyMTg3NX0.LlIi3cEdaFEbKfWAqgRvC6KepfDJLhreARfX6Rw-ubI"
@@ -24,6 +26,7 @@ class AddRoom : AppCompatActivity() {
         install(Postgrest)
         //install other modules
     }
+
     fun client() : SupabaseClient
     {
         return client
@@ -33,6 +36,8 @@ class AddRoom : AppCompatActivity() {
         setContentView(R.layout.add_room)
         val btnAdd = findViewById<ImageButton>(R.id.btnAddRoom)
         val arrayT: ArrayList<DataClass.Room> = ArrayList()
+        val qwe:String = intent.getStringExtra("address").toString()
+        addressText.text = qwe
         Log.e("!!", "2")
 
 

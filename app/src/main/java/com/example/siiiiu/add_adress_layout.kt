@@ -3,6 +3,7 @@ package com.example.siiiiu
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import androidx.lifecycle.lifecycleScope
 import io.github.jan.supabase.SupabaseClient
@@ -15,6 +16,9 @@ import io.github.jan.supabase.postgrest.postgrest
 import kotlinx.coroutines.launch
 
 class add_adress_layout : AppCompatActivity() {
+ //   val qwe = intent.getStringExtra("adressSet2")
+
+    @kotlinx.serialization.Serializable
     data class AdressAdd (val Adress : String = "")
     public val client = createSupabaseClient(
         supabaseUrl = "https://glwyfmrukvbrductrilt.supabase.co",
@@ -31,19 +35,18 @@ class add_adress_layout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_adress_layout)
+
         val addAdress = findViewById<EditText>(R.id.editinfo)
-        val btnSave = findViewById<EditText>(R.id.btnSave)
+        val btnSave = findViewById<Button>(R.id.btnSave)
 
 
         btnSave.setOnClickListener {
             val city = AdressAdd(Adress = addAdress.text.toString())
-            lifecycleScope.launch {
 
-            }
             lifecycleScope.launch {
                 client.postgrest["Data"].insert(city)
             }
-            val intenttt = Intent(this, AddRoom::class.java)
+           val intenttt = Intent(this, AddRoom::class.java)
             startActivity(intenttt)
         }
 

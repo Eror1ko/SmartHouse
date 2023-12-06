@@ -44,11 +44,17 @@ class Registration : AppCompatActivity() {
                 val user = client.gotrue.signUpWith(Email) {
                     email = editEmail.text.toString()
                     password = editPassword.text.toString()
+
                 }
             }
+
             lifecycleScope.launch {
                 client.postgrest["Data"].insert(city)
             }
+
+            val Intentik = Intent(this, CreatePinCode::class.java)
+            //Intentik.putExtra("addressSet", city.toString())
+            startActivity(Intentik)
         }
 
         fun btnIn(view: View) {
